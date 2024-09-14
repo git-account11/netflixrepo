@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix UI Clone</title>
+    <!-- css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- boostrap cdn link-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poiret+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <!-- <style>
+        body {
+            background-color: var(--nfx-accordion);
+        }
+    </style> -->
+</head>
+<body class="--bs-body-bg-rgb">
+    <div class="main-container">
+        <!-- Home -->
+        <section id="home-section">
+          <!-- navbar -->
+                <nav class="navbar navbar-expand bg-transparent pt-3">
+                  <div class="container-lg container-fluid d-flex flex-column flex-sm-row">
+              <!-- logo -->
+                    <a class="navbar-brand ms-5 me-auto" href="#">
+                      <img src="./assets/netflix_logo_icon.png" alt="NETFLIX" height="40">
+                    </a>
+              <!-- language -->
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                      <ul class="navbar-nav ms-auto  me-4">
+                        <li class="nav-item dropdown ">
+                          <a class="nav-link dropdown-toggle text-light p-1 pe-3 ps-3 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="currentColor" aria-hidden="true" id="Language--Streamline-Heroicons" height="16" width="16"><desc>Language Streamline Icon: https://streamlinehq.com</desc><path fill-rule="evenodd" d="M5.2385625000000005 0.15006250000000002C5.550812499999999 0.15006250000000002 5.8039375 0.40318750000000003 5.8039375 0.7154375000000001V1.8506875C7.1505624999999995 1.871 8.495125 1.964375 9.831625 2.130375C10.263625000000001 2.1843125 10.47525 2.68575 10.2125 3.0329374999999996C10.0905625 3.1940625000000002 9.891875 3.277875 9.691375 3.2528125C9.193875 3.19025 8.694125 3.1390000000000002 8.1913125 3.0975C7.7515625 4.8130625 6.992000000000001 6.430125 5.952437499999999 7.8639375000000005C6.1921875 8.1534375 6.4424375000000005 8.4315625 6.706250000000001 8.6984375C7.011500000000001 9.008875 6.8661875000000006 9.5333125 6.444687500000001 9.6424375C6.249124999999999 9.6930625 6.0413125 9.6355 5.899687500000001 9.4914375C5.671125 9.259125000000001 5.4506250000000005 9.019 5.2385625000000005 8.7715625C4.0485625 10.1621875 2.60075 11.3095 0.9749375 12.150187500000001C0.5881875000000001 12.349812499999999 0.13037500000000002 12.055875 0.150875 11.621125000000001C0.160375 11.4193125 0.2768125 11.2379375 0.4563125 11.1453125C2.0194375 10.3368125 3.4030625 9.220625 4.5239375 7.8639375000000005C3.8663125 6.9559375 3.3191875 5.9728125 2.8941875 4.9353125C2.7371875 4.5294375 3.0785 4.1057500000000005 3.5085625 4.1728125C3.700375 4.202687500000001 3.8635 4.3289375 3.9405 4.5071875C4.287125 5.353250000000001 4.72225 6.1603125 5.2385625000000005 6.914875C6.0518125000000005 5.726375 6.6610000000000005 4.4104375000000005 7.0409375 3.021375C4.953125 2.9178125 2.8602499999999997 2.99525 0.7857500000000001 3.2528125C0.35374999999999995 3.30675 0.0253125 2.8728124999999998 0.19456250000000003 2.4716875C0.273125 2.2855 0.44506249999999997 2.1554375 0.6455624999999999 2.130375C1.9819999999999998 1.964 3.3265624999999996 1.8706875 4.6731875 1.8506875V0.7154375000000001C4.6731875 0.40318750000000003 4.9263125 0.15006250000000002 5.2385625000000005 0.15006250000000002ZM10.326875 5.238375C10.5466875 5.238312499999999 10.746562500000001 5.365562499999999 10.8395 5.56475L14.7970625 14.04525C14.981 14.439875 14.6688125 14.885625000000001 14.2350625 14.847625C14.0338125 14.830000000000002 13.857187500000002 14.706312500000001 13.7718125 14.5231875L12.86875 12.588124999999998H7.785L6.881874999999999 14.5231875C6.6979375 14.9178125 6.1558125 14.965312500000001 5.9060625 14.608687499999998C5.790125000000001 14.4431875 5.7713125 14.2284375 5.8566875 14.04525L9.81425 5.56475C9.907125 5.365562499999999 10.1070625 5.238312499999999 10.326875 5.238375ZM8.3126875 11.457375H12.3410625L10.326875 7.141L8.3126875 11.457375Z" clip-rule="evenodd" stroke-width="1"></path> </svg>
+                            <sapn class="d-none d-md-inline">English</sapn>
+                          </a>
+                          <ul class="dropdown-menu rounded-2">
+                                <li><a id="" class="dropdown-item active" href="#">English</a></li>
+                                <li><a class="dropdown-item" href="#"><span lang="hi">हिंदी</span></a></li>
+                          </ul>
+                      </li>
+                      </ul>
+              <!-- sign in -->
+                      <form class="d-flex " >
+                        <button class="btn text-light " type="submit">Sign In</button>
+                      </form>
+                    </div>
+                  </div>
+                </nav>    
+
+			<div class="home-div">
+				<!-- title -->
+				<h1>Unlimited movies, TV shows and more</h1>
+				<!-- subtitle -->
+				<p>Watch anywhere. Cancel anytime.</p>
+				<!-- form -->
+					<form class="home-form">
+						<!-- subtitle -->
+						<h3>Ready to watch? Enter your email to create or restart your membership.</h3>
+						<div class="d-flex flex-column flex-md-row  pt-3">
+							<!-- input-email -->
+							<div class="input-email me-2 pb-3 pb-md-0">
+								<input class="rounded-2" id="email" type="email" required>
+								<label class="floating-label" for="username">Email address</label >
+							</div>
+							<!-- get started button -->
+							<button class="btn text-light " type="submit">Get Started <span>&gt;</span></button>
+
+						</div>
+					</form>
+			</div>
+        </section>
+    
+            
+       
+     
+      
+        <!-- FAQ -->
+            <section id="faq" >
+                <div class="d-flex flex-column justify-content-center">
+                    <!-- heading -->
+                    <h1 class="text-center">Frequently Asked Questions</h1>
+                    <!-- accordion -->
+                    <div class="Accordion">
+                        <details class="accordionItem">
+                            <summary>What is Netflix?</summary>
+                            <div class="content">
+                                <p>Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries and more - on thousands of internet-connected devices.</p>
+                                <p>You can watch as much as you want, whenever you want, without a single ad - all for one low monthly price. There's always something new to discover, and new TV shows and movies are added every week!</p>
+                            </div>
+                        </details>
+                        <details class="accordionItem">
+                            <summary>How much does Netflix cost?</summary>
+                            <div class="content">
+                                <p>Watch Netflix on your smartphone, tablet, Smart TV, laptop, or streaming device, all for one fixed monthly fee. Plans range from ₹149 to ₹649 a month. No extra costs, no contracts.</p>
+                            </div>
+                        </details>
+                        <details class="accordionItem">
+                            <summary>Where can I watch?</summary>
+                            <div class="content">
+                                <p>Watch anywhere, anytime. Sign in with your Netflix account to watch instantly on the web at netflix.com from your personal computer or on any internet-connected device that offers the Netflix app, including smart TVs, smartphones, tablets, streaming media players and game consoles.</p>
+                                <p>You can also download your favourite shows with the iOS or Android app. Use downloads to watch while you're on the go and without an internet connection. Take Netflix with you anywhere.</p>
+                            </div>
+                        </details>
+                        <details class="accordionItem">
+                            <summary>How do I cancel?</summary>
+                            <div class="content">
+                                <p>Netflix is flexible. There are no annoying contracts and no commitments. You can easily cancel your account online in two clicks. There are no cancellation fees – start or stop your account anytime.</p>
+                            </div>
+                        </details>
+                        <details class="accordionItem">
+                            <summary>What can I watch on Netflix?</summary>
+                            <div class="content">
+                                <p>Netflix has an extensive library of feature films, documentaries, TV shows, anime, award-winning Netflix originals, and more. Watch as much as you want, anytime you want...</p>
+                            </div>
+                        </details>
+                        <details class="accordionItem">
+                            <summary>Is Netflix good for kids?</summary>
+                            <div class="content">
+                                <p>The Netflix Kids experience is included in your membership to give parents control while kids enjoy family-friendly TV shows and films in their own space.</p>
+                                <p>Kids profiles come with PIN-protected parental controls that let you restrict the maturity rating of content kids can watch and block specific titles you don't want kids to see.</p>
+                            </div>
+                        </details>
+                    </div>
+                     <!-- form -->
+					<form class="home-form">
+						<!-- subtitle -->
+						<h3 class="text-center">Ready to watch? Enter your email to create or restart your membership.</h3>
+						<div class="pt-3 d-flex flex-column flex-md-row">
+							<!-- input-email -->
+							<div class="input-email me-2 pb-3 pb-md-0">
+								<input class="rounded-2" id="email" type="email" required>
+								<label class="floating-label" for="username">Email address</label >
+							</div>
+							<!-- get started button -->
+							<button class="btn text-light " type="submit">Get Started <span>&gt;</span></button>
+						</div>
+					</form>
+                </div>
+            </section>
+                
+        <!-- footer -->
+            <footer>
+                <!-- questions-call -->
+                <div class="footer-div d-flex flex-column flex-md-row">
+                    <div>Questions? Call </div>
+                    <a class="call" href=""> 000 800 919 1694</a>
+                </div>
+
+                <!-- footer divs -->
+                 <div class="footer-div">
+                    <ul class="services ps-0 pt-2 pb-2">
+                        <li><a href="">FAQ</a></li>
+                        <li><a href="">Help Centre</a></li>
+                        <li><a href="">Account</a></li>
+                        <li><a href="">Media Centre</a></li>
+                        <li><a href="">Investor Relations</a></li>
+                        <li><a href="">Jobs</a></li>
+                        <li><a href="">Ways to Watch</a></li>
+                        <li><a href="">Terms of Use</a></li>
+                        <li><a href="">Privacy</a></li>
+                        <li><a href="">Cookie Preference</a></li>
+                        <li><a href="">Corporate Information</a></li>
+                        <li><a href="">Contact Us</a></li>
+                        <li><a href="">Speed Test</a></li>
+                        <li><a href="">Legal Notices</a></li>
+                        <li><a href="">Only on Netflix</a></li>
+                    </ul>
+                 </div>
+                 <div class="footer-div">
+                    <nav class="navbar navbar-expand bg-transparent">
+                        <div class="">
+                    <!-- language -->
+                          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                              <li class="nav-item dropdown ">
+                                <a class="nav-link dropdown-toggle text-light p-1 pe-3 ps-3 " href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="-0.5 -0.5 16 16" fill="currentColor" aria-hidden="true" id="Language--Streamline-Heroicons" height="16" width="16"><desc>Language Streamline Icon: https://streamlinehq.com</desc><path fill-rule="evenodd" d="M5.2385625000000005 0.15006250000000002C5.550812499999999 0.15006250000000002 5.8039375 0.40318750000000003 5.8039375 0.7154375000000001V1.8506875C7.1505624999999995 1.871 8.495125 1.964375 9.831625 2.130375C10.263625000000001 2.1843125 10.47525 2.68575 10.2125 3.0329374999999996C10.0905625 3.1940625000000002 9.891875 3.277875 9.691375 3.2528125C9.193875 3.19025 8.694125 3.1390000000000002 8.1913125 3.0975C7.7515625 4.8130625 6.992000000000001 6.430125 5.952437499999999 7.8639375000000005C6.1921875 8.1534375 6.4424375000000005 8.4315625 6.706250000000001 8.6984375C7.011500000000001 9.008875 6.8661875000000006 9.5333125 6.444687500000001 9.6424375C6.249124999999999 9.6930625 6.0413125 9.6355 5.899687500000001 9.4914375C5.671125 9.259125000000001 5.4506250000000005 9.019 5.2385625000000005 8.7715625C4.0485625 10.1621875 2.60075 11.3095 0.9749375 12.150187500000001C0.5881875000000001 12.349812499999999 0.13037500000000002 12.055875 0.150875 11.621125000000001C0.160375 11.4193125 0.2768125 11.2379375 0.4563125 11.1453125C2.0194375 10.3368125 3.4030625 9.220625 4.5239375 7.8639375000000005C3.8663125 6.9559375 3.3191875 5.9728125 2.8941875 4.9353125C2.7371875 4.5294375 3.0785 4.1057500000000005 3.5085625 4.1728125C3.700375 4.202687500000001 3.8635 4.3289375 3.9405 4.5071875C4.287125 5.353250000000001 4.72225 6.1603125 5.2385625000000005 6.914875C6.0518125000000005 5.726375 6.6610000000000005 4.4104375000000005 7.0409375 3.021375C4.953125 2.9178125 2.8602499999999997 2.99525 0.7857500000000001 3.2528125C0.35374999999999995 3.30675 0.0253125 2.8728124999999998 0.19456250000000003 2.4716875C0.273125 2.2855 0.44506249999999997 2.1554375 0.6455624999999999 2.130375C1.9819999999999998 1.964 3.3265624999999996 1.8706875 4.6731875 1.8506875V0.7154375000000001C4.6731875 0.40318750000000003 4.9263125 0.15006250000000002 5.2385625000000005 0.15006250000000002ZM10.326875 5.238375C10.5466875 5.238312499999999 10.746562500000001 5.365562499999999 10.8395 5.56475L14.7970625 14.04525C14.981 14.439875 14.6688125 14.885625000000001 14.2350625 14.847625C14.0338125 14.830000000000002 13.857187500000002 14.706312500000001 13.7718125 14.5231875L12.86875 12.588124999999998H7.785L6.881874999999999 14.5231875C6.6979375 14.9178125 6.1558125 14.965312500000001 5.9060625 14.608687499999998C5.790125000000001 14.4431875 5.7713125 14.2284375 5.8566875 14.04525L9.81425 5.56475C9.907125 5.365562499999999 10.1070625 5.238312499999999 10.326875 5.238375ZM8.3126875 11.457375H12.3410625L10.326875 7.141L8.3126875 11.457375Z" clip-rule="evenodd" stroke-width="1"></path> </svg>
+                                  English
+                                </a>
+                                <ul class="dropdown-menu rounded-2">
+                                      <li><a id="" class="dropdown-item active" href="#">English</a></li>
+                                      <li><a class="dropdown-item" href="#"><span lang="hi">हिंदी</span></a></li>
+                                </ul>
+                            </li>
+                            </ul>
+                          </div>
+                        </div>
+                      </nav>
+                 </div>
+                 <div class="footer-div pt-3">Netflix India</div>
+            </footer>
+    </div>
+</body>
+<!-- boostrap script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
